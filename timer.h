@@ -9,9 +9,10 @@
 
 typedef struct timer_queue {
 	struct list_head node;
-	void (*func) (void);
-	int tm_sec;
-	int create_time;
+	//void (*func) (struct thread *t);
+	int (*func) (void);
+	struct timeval alarm_time;
+	//int create_time;
 }timer_queue_t;
 
 #endif
